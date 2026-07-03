@@ -18,7 +18,7 @@ body {
   border-radius: 32px;
   background: #f4f6fb;
   padding: 14px;
-  padding-bottom: 110px; /* ⭐ 중요: 하단 nav 공간 확보 */
+  padding-bottom: 110px;
 }
 
 /* HERO */
@@ -52,7 +52,7 @@ body {
   margin-top: 8px;
 }
 
-/* SCHEDULE ITEM */
+/* ITEM */
 .item {
   margin-top: 10px;
   padding: 12px;
@@ -119,4 +119,9 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* FINAL TOUCH */
+.card {
+  transition: 0.25s ease;
 }
