@@ -1,37 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-body {
-  background: #f4f6fb;
-  display: flex;
-  justify-content: center;
-  padding: 16px;
-}
-
 .phone {
   width: 390px;
   max-width: 100%;
   border-radius: 32px;
   background: #f4f6fb;
   padding: 14px;
-  padding-bottom: 110px;
+  padding-bottom: 140px; /* ⭐ 핵심: 플러스 버튼 공간 확보 */
 }
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #6f4cff, #4b63ff);
-  color: white;
-  padding: 26px;
-  border-radius: 28px;
-  margin-bottom: 18px;
-  box-shadow: 0 15px 35px rgba(79, 78, 255, 0.25);
-}
-
-/* CARD */
+/* 카드 */
 .card {
   background: white;
   border-radius: 20px;
@@ -39,35 +15,17 @@ body {
   margin-bottom: 14px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.25s ease;
+  position: relative;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-}
-
-/* ROW */
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-/* ITEM */
-.item {
-  margin-top: 10px;
-  padding: 12px;
-  border-radius: 14px;
-  background: #f8f9ff;
-}
-
-/* FLOAT BUTTON */
+/* 플러스 버튼 */
 .floating-btn {
   position: fixed;
   bottom: 95px;
   left: 50%;
   transform: translateX(-50%);
-  width: 62px;
-  height: 62px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: #4b63ff;
   color: white;
@@ -76,10 +34,10 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 15px 30px rgba(75,99,255,0.4);
-  z-index: 999;
+  z-index: 9999; /* ⭐ 핵심 */
 }
 
-/* BOTTOM NAV */
+/* 하단바 */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -94,34 +52,12 @@ body {
   z-index: 1000;
 }
 
-.bottom-nav div {
-  font-size: 12px;
-  text-align: center;
-  color: #777;
-}
-
-.bottom-nav .active {
-  color: #4b63ff;
-  font-weight: 700;
-}
-
-/* ANIMATION */
-.card {
-  animation: fadeUp 0.4s ease;
-}
-
+/* 애니메이션 */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* FINAL TOUCH */
 .card {
-  transition: 0.25s ease;
+  animation: fadeUp 0.35s ease;
 }
