@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Travel App V4</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="phone">
+
+<header class="hero">
+<div class="country">🇦🇹 → 🇨🇿 → 🇭🇺</div>
+<h1>유럽 여행</h1>
+<p class="date">2026.10.28 ~ 2026.11.10</p>
+<div class="d-day" id="dDay">D-0</div>
+</header>
+
+<section class="card">
+<h2>💳 공동지갑</h2>
+<div class="row"><span>트래블카드</span><strong>€682.45</strong></div>
+<div class="row"><span>현금</span><strong>€120</strong></div>
+</section>
+
+<section class="card">
+<h2>✈️ 다음 일정</h2>
+<div class="item">
+<div>항공권 결제</div>
+<div>2026.10.31 09:20</div>
+<div id="countdown">D-0</div>
+</div>
+</section>
+
+<section class="card">
+<h2>💰 정산</h2>
+<div class="row"><span>주희</span><strong>+₩326,500</strong></div>
+<div class="row"><span>정은</span><strong>-₩326,500</strong></div>
+</section>
+
+<section class="card">
+<h2>🧾 최근 거래</h2>
+<div class="row"><span>🍜 라면</span><strong>-€2.30</strong></div>
+<div class="row"><span>🚇 지하철</span><strong>-€4.20</strong></div>
+<div class="row"><span>☕ 커피</span><strong>-€5.80</strong></div>
+</section>
+
+</div>
+
+<div class="floating-btn" onclick="addTransaction()">+</div>
+
+<nav class="bottom-nav">
+<div>🏠<br/>홈</div>
+<div>💳<br/>거래</div>
+<div class="active">➕</div>
+<div>📅<br/>일정</div>
+<div>👤<br/>더보기</div>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
