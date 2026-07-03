@@ -1,24 +1,13 @@
-const tripStart = new Date("2026-10-28");
-const today = new Date();
-
-const diff = Math.ceil((tripStart - today) / (1000 * 60 * 60 * 24));
-
 document.addEventListener("DOMContentLoaded", () => {
+  const tripStart = new Date("2026-10-28T00:00:00");
+  const today = new Date();
+
+  const diff = Math.ceil(
+    (tripStart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
   const ddayEl = document.querySelector(".d-day");
-  if (ddayEl) ddayEl.innerText = `D-${diff}`;
-});
-
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    card.classList.add("active-pop");
-    setTimeout(() => card.classList.remove("active-pop"), 200);
-  });
-});
-
-const fab = document.querySelector(".floating-btn");
-if (fab) {
-  fab.addEventListener("click", () => {
-    fab.classList.add("clicked");
-    setTimeout(() => fab.classList.remove("clicked"), 200);
-  });
+  if (ddayEl) {
+    ddayEl.innerText = diff > 0 ? `D-${diff}` : "D-Day";
+  }
 });
