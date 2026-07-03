@@ -1,13 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const tripStart = new Date("2026-10-28T00:00:00");
-  const today = new Date();
+  const startDate = new Date("2026-10-28T00:00:00");
 
-  const diff = Math.ceil(
-    (tripStart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  const now = new Date();
+  now.setHours(0,0,0,0);
 
-  const ddayEl = document.querySelector(".d-day");
-  if (ddayEl) {
-    ddayEl.innerText = diff > 0 ? `D-${diff}` : "D-Day";
+  const diff = Math.ceil((startDate - now) / (1000 * 60 * 60 * 24));
+
+  const el = document.querySelector(".d-day");
+
+  if (!el) return;
+
+  if (diff > 0) {
+    el.innerText = `D-${diff}`;
+  } else if (diff === 0) {
+    el.innerText = "D-DAY";
+  } else {
+    el.innerText = `D+${Math.abs(diff)}`;
   }
 });
